@@ -13,6 +13,10 @@
     ((inv flip[x] mmu x) mmu flip x:flip x) mmu y
  };
 
-.stat.econ.regression:{
+.stat.econ.linreg:{
+    
+ };
+
+.stat.econ.logreg:{
     
  };
