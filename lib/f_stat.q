@@ -10,5 +10,9 @@
 
 / .stat.matrix.ols[(1 1 1f;1 5 4f);3 11 9f]
 .stat.matrix.ols:{
-    ((inv flip[x] mmu x) mmu flip x: flip x) mmu y
+    ((inv flip[x] mmu x) mmu flip x:flip x) mmu y
+ };
+
+.stat.econ.regression:{
+    
  };
