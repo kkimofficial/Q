@@ -13,6 +13,10 @@
     ((inv flip[x] mmu x) mmu flip x:flip x) mmu y
  };
 
+.stat.dist.uniform:{
+    x+(z?1f)*y-x
+ };
+
 .stat.econ.linreg:{
     
  };
