@@ -18,7 +18,7 @@
  };
 
 .stat.econ.linreg:{
-    
+    ([]name:`const,-1_cols x;estimate:.stat.matrix.ols[-1_t;raze -1#t:{enlist[count[flip x]#1f],x}flip raze each x])
  };
 
 .stat.econ.logreg:{
