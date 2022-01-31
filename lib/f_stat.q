@@ -17,8 +17,9 @@
     x+(z?1f)*y-x
  };
 
+/ .stat.econ.linreg ([] x1: 1 5 4f; y: 3 11 9f)
 .stat.econ.linreg:{
-    ([]name:`const,-1_cols x;estimate:.stat.matrix.ols[-1_t;raze -1#t:{enlist[count[flip x]#1f],x}flip raze each x])
+    ([]coefficient:`intercept,-1_cols x;estimate:.stat.matrix.ols[-1_t;raze -1#t:{enlist[count[flip x]#1f],x}flip raze each x])
  };
 
 .stat.econ.logreg:{
