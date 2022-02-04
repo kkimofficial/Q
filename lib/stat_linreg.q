@@ -1,7 +1,3 @@
-.stat.util.sel:{
-    ?[x;();0b;{x!x}(),y]
- };
-
 / .stat.linreg.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~x1+x2"]
 .stat.linreg.construct:{[t;e]
     e:ssr[e;" ";""];
