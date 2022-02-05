@@ -12,3 +12,8 @@
 .stat.math.sigmoid:{
     1%1+exp neg x
  };
+
+/ .stat.math.distance.euclidean[1 2 3 4f;5 6 7 8f]
+.stat.math.distance.euclidean:{
+    sqrt sum xexp[y-x;2]
+ };
