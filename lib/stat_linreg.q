@@ -23,5 +23,5 @@
  
  / .stat.linreg.report .stat.linreg.insample[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~x1+x2"]
 .stat.linreg.report:{[m]
-    ([]coefficient:m[`beta]`coefficient;estimate:m[`beta]`estimate;r2:m`r2;r2adjusted:m`r2adj;samplesize:count m`y;equation:`$m`equation)
+    ([]coefficient:m[`beta]`coefficient;estimate:m[`beta]`estimate;r2:.stat.linreg.r2 m;r2adjusted:.stat.linreg.r2adj m;samplesize:count m`y;equation:`$m`equation)
  };
