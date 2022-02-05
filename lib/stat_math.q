@@ -17,3 +17,11 @@
 .stat.math.distance.euclidean:{
     sqrt sum xexp[y-x;2]
  };
+
+.stat.math.standardize:{
+    (x-avg x)%dev x
+ };
+
+.stat.math.normalize:{
+    (x-min x)%max[x]-min x
+ };
