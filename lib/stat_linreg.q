@@ -13,6 +13,12 @@
     :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(-1_cols t;beta);e);
  };
 
+.stat.linreg.outofsample:{[t;m]
+    y:raze .stat.util.table2matrix(-1#cols t)#t:.stat.linreg.construct[t;m`equation];
+    yhat:(x:.stat.util.table2matrix(-1_cols t)#t)mmu m[`beta]`estimate;
+    :m,(`x`y`yhat)!(x;y;yhat);
+ };
+
 .stat.linreg.r2:{[m]
     1-sum[rss:(m[`y]-m`yhat)xexp 2]%sum tss:(m[`y]-avg m`y)xexp 2
  };
