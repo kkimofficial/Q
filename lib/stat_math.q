@@ -1,5 +1,5 @@
 / .stat.math.uniform[-1;1;100]
-.stat.math.uniform:{
+.stat.math.runiform:{
     x+(z?1f)*y-x
  };
 
