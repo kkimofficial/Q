@@ -1,9 +1,8 @@
 / .stat.linreg.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~x1+x2"]
 .stat.linreg.construct:{[t;e]
-    e:ssr[e;" ";""];
-    lhs:`$ss[e;"~"]#e;
-    rhs:`$"+"vs(neg -1+count[e]-ss[e;"~"])#e;
-    :.stat.util.sel[t;] rhs,lhs;
+    lhs:`$(eq:max 0,first ss[e;"~"])#e:ssr[e;" ";""];
+    :rhs:`$"+"vs(neg count[e]-eq+not eq=0)#e;
+    :.stat.util.sel[t;]{x where not null x}rhs,lhs;
  };
 
 / .stat.linreg.insample[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~x1+x2"]
