@@ -2,7 +2,7 @@
 .statq.logreg.insample:{[t;d]
     .statq.util.required[d;`equation];
     d:.statq.util.optional[d;`iterations`step;(1000;0.1)];
-    t:.statq.linreg.construct[t;d`equation];
+    t:.statq.util.construct[t;d`equation];
     y:raze .statq.util.table2matrix t`y;
     x:.statq.util.table2matrix t`x;
     beta:d[`iterations]{[beta;x;y;alpha]beta-alpha*(.statq.math.sigmoid[x mmu beta]-y)mmu x}[;x;y;d`step]/count[flip x]#1f;
