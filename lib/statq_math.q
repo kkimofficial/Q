@@ -25,3 +25,7 @@
 .statq.math.normalize:{
     (x-min x)%max[x]-min x
  };
+
+.statq.math.gd:{[lossgd;beta;step;iterations]
+    iterations{[beta;f;alpha]beta-alpha*f beta}[;lossgd;step]/beta
+ };
