@@ -14,8 +14,9 @@
  };
 
 .statq.linreg.outofsample:{[t;m]
-    y:raze .statq.util.table2matrix(-1#cols t)#t:.statq.linreg.construct[t;m`equation];
-    yhat:(x:.statq.util.table2matrix(-1_cols t)#t)mmu m[`beta]`estimate;
+    t:.statq.linreg.construct[t;m`equation];
+    y:raze .statq.util.table2matrix t`y;
+    yhat:(x:.statq.util.table2matrix t`x)mmu m[`beta]`estimate;
     :m,(`x`y`yhat)!(x;y;yhat);
  };
 
