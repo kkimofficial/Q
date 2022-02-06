@@ -9,8 +9,8 @@
 / .statq.linreg.insample[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
 .statq.linreg.insample:{[t;e]
     t:.statq.linreg.construct[t;e];
-    yhat:x mmu beta:.statq.matrix.ols[x:.statq.util.table2matrix(-1_cols t)#t;y:raze .statq.util.table2matrix(-1#cols t)#t];
-    :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(-1_cols t;beta);e);
+    yhat:x mmu beta:.statq.matrix.ols[x:.statq.util.table2matrix t`x;y:raze .statq.util.table2matrix t`y];
+    :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(cols t`x;beta);e);
  };
 
 .statq.linreg.outofsample:{[t;m]
