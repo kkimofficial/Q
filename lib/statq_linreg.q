@@ -6,11 +6,12 @@
     :(`x`y)!(.statq.util.sel[t;`$rhs];$[count lhs;.statq.util.sel[t;`$lhs];()]);
  };
 
-/ .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);"y~intercept+x1"]
-.statq.linreg.insample:{[t;e]
-    t:.statq.linreg.construct[t;e];
+/ .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);enlist[`equation]!enlist "y~intercept+x1"]
+.statq.linreg.insample:{[t;d]
+    .statq.util.required[d;`equation];
+    t:.statq.linreg.construct[t;d`equation];
     yhat:x mmu beta:.statq.matrix.ols[x:.statq.util.table2matrix t`x;y:raze .statq.util.table2matrix t`y];
-    :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(cols t`x;beta);e);
+    :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(cols t`x;beta);d`equation);
  };
 
 .statq.linreg.outofsample:{[t;m]
