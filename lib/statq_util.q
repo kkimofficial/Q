@@ -11,6 +11,6 @@
     if[count arg:arg where not (arg:(),arg) in key d;'.Q.s1 arg];
  };
 
-.statq.util.optional:{[d;arg]
-    arg,d
+.statq.util.optional:{[d;arg;val]
+    (((),arg)!((),val)),d
  };
