@@ -7,3 +7,10 @@
     flip value flip x
  };
 
+.statq.util.required:{[d;arg]
+    if[count arg:arg where not (arg:(),arg) in key d;'.Q.s1 arg];
+ };
+
+.statq.util.optional:{[d;arg]
+    arg,d
+ };
