@@ -6,7 +6,7 @@
     :(`x`y)!(.stat.util.sel[t;`$rhs];$[count lhs;.stat.util.sel[t;`$lhs];()]);
  };
 
-/ .statq.linreg.insample[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
+/ .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);"y~intercept+x1"]
 .statq.linreg.insample:{[t;e]
     t:.statq.linreg.construct[t;e];
     yhat:x mmu beta:.statq.matrix.ols[x:.statq.util.table2matrix t`x;y:raze .statq.util.table2matrix t`y];
@@ -21,7 +21,7 @@
  };
 
 .statq.linreg.r2:{[m]
-    1-sum[rss:(m[`y]-m`yhat)xexp 2]%sum tss:(m[`y]-avg m`y)xexp 2
+    1-sum[(m[`y]-m`yhat)xexp 2]%sum(m[`y]-avg m`y)xexp 2
  };
 
 .statq.linreg.r2adj:{[m]
