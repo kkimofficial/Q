@@ -1,21 +1,13 @@
-/ .statq.linreg.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
-.statq.linreg.construct:{[t;e]
-    lhs:$[1<count e:"~"vs ssr[e;" ";""];first e;()];
-    rhs:"+"vs last e;
-    if["intercept" in rhs;t:update intercept:1f from t;];
-    :(`x`y)!(.statq.util.sel[t;`$rhs];$[count lhs;.statq.util.sel[t;`$lhs];()]);
- };
-
 / .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);enlist[`equation]!enlist "y~intercept+x1"]
 .statq.linreg.insample:{[t;d]
     .statq.util.required[d;`equation];
-    t:.statq.linreg.construct[t;d`equation];
+    t:.statq.util.construct[t;d`equation];
     yhat:x mmu beta:.statq.matrix.ols[x:.statq.util.table2matrix t`x;y:raze .statq.util.table2matrix t`y];
     :(`x`y`yhat`beta`equation)!(x;y;yhat;(`coefficient`estimate)!(cols t`x;beta);d`equation);
  };
 
 .statq.linreg.outofsample:{[t;m]
-    t:.statq.linreg.construct[t;m`equation];
+    t:.statq.util.construct[t;m`equation];
     y:raze .statq.util.table2matrix t`y;
     yhat:(x:.statq.util.table2matrix t`x)mmu m[`beta]`estimate;
     :m,(`x`y`yhat)!(x;y;yhat);
