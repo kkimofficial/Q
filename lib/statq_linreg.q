@@ -3,7 +3,7 @@
     lhs:$[1<count e:"~"vs ssr[e;" ";""];first e;()];
     rhs:"+"vs last e;
     if["intercept" in rhs;t:update intercept:1f from t;];
-    :(`x`y)!(.stat.util.sel[t;`$rhs];$[count lhs;.stat.util.sel[t;`$lhs];()]);
+    :(`x`y)!(.statq.util.sel[t;`$rhs];$[count lhs;.statq.util.sel[t;`$lhs];()]);
  };
 
 / .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);"y~intercept+x1"]
