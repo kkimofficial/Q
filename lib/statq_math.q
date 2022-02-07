@@ -8,6 +8,10 @@
     x min(-1+(#:)x),(_:)y*(#:)x:asc x
  };
 
+.statq.math.round:{
+    floor x+0.5
+ };
+
 / .statq.math.sigmoid 0.4
 .statq.math.sigmoid:{
     1%1+exp neg x
