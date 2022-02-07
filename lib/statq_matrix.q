@@ -10,7 +10,7 @@
  };
 
 / *
-/ * .statq.matrix.ols: returns solution for y = x'beta
+/ * .statq.matrix.ols: returns ordinary least squares solution for y = x'beta
 / * See https://en.wikipedia.org/wiki/Ordinary_least_squares
 / *
 / * @param {float matrix} x: matrix of explanatory observations
