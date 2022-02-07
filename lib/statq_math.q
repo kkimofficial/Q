@@ -26,6 +26,16 @@
     (x-min x)%max[x]-min x
  };
 
+/ *
+/ * .statq.math.gd: performs a gradient descent over a loss derivative function
+/ * See https://en.wikipedia.org/wiki/Gradient_descent
+/ *
+/ * @param {function} lossgd: loss derivative function
+/ * @param {float list} beta: initial value of parameters
+/ * @param {float} step: alpha of gradient descent
+/ * @param {int} iterations: number of iterations to perform gradient descent
+/ * @returns {int matrix}
+/ * @example: 
 .statq.math.gd:{[lossgd;beta;step;iterations]
     iterations{[beta;f;alpha]beta-alpha*f beta}[;lossgd;step]/beta
  };
