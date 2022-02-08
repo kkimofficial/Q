@@ -3,7 +3,7 @@
  };
 
 / .statq.util.table2matrix ([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)
-.statq.util.t2m:{
+.statq.util.tab2mat:{
     flip value flip x
  };
 
