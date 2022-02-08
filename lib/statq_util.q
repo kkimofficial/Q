@@ -23,6 +23,7 @@
     :(`x`y)!(.statq.util.sel[t;`$rhs];$[count lhs;.statq.util.sel[t;`$lhs];()]);
  };
 
-.statq.util.prepare:{
-    (`x`y`colsx`colsy)!(.statq.util.table2matrix x`x;raze .statq.util.table2matrix x`y;cols x`x;cols x`y)
+.statq.util.prepare:{[t;e]
+    t:.statq.util.construct[t;e];
+    (`x`y`colsx`colsy)!(.statq.util.table2matrix t`x;raze .statq.util.table2matrix t`y;cols t`x;cols t`y)
  };
