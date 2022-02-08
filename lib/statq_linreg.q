@@ -1,4 +1,11 @@
-/ .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);enlist[`equation]!enlist "y~intercept+x1"]
+/ *
+/ * .statq.linreg.insample: fits a linear function between explanatory and dependent variables
+/ * See https://en.wikipedia.org/wiki/Linear_regression
+/ *
+/ * @param {table} t: table with explanatory and dependent variables
+/ * @param {dictionary} p: dicitonary of parameters
+/ * @returns {dictionary}: model estimates
+/ * @example: .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);enlist[`equation]!enlist "y~intercept+x1"]
 .statq.linreg.insample:{[t;p]
     t:.statq.util.prepare[t;].statq.util.required[p;`equation]`equation;
     yhat:t[`x]mmu beta:.statq.matrix.ols[t`x;t`y];
