@@ -8,7 +8,7 @@
  };
 
 .statq.util.required:{[p;arg]
-    if[count arg:arg where not (arg:(),arg) in key p;'.Q.s1 arg];
+    $[count arg:arg where not (arg:(),arg) in key p;'.Q.s1 arg;p]
  };
 
 .statq.util.optional:{[p;arg;val]
