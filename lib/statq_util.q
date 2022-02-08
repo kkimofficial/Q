@@ -22,3 +22,7 @@
     if["intercept" in rhs;t:update intercept:1f from t;];
     :(`x`y)!(.statq.util.sel[t;`$rhs];$[count lhs;.statq.util.sel[t;`$lhs];()]);
  };
+
+.statq.util.prepare:{
+    (`x`y`colsx`colsy)!(.statq.util.table2matrix x`x;raze .statq.util.table2matrix x`y;cols x`x;cols x`y)
+ };
