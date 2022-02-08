@@ -2,7 +2,7 @@
 .statq.linreg.insample:{[t;p]
     .statq.util.required[p;`equation];
     t:.statq.util.prepare[t;p`equation];
-    yhat:t[`x] mmu beta:.statq.matrix.ols[t`x;t`y];
+    yhat:t[`x]mmu beta:.statq.matrix.ols[t`x;t`y];
     :(`x`y`yhat`beta`equation)!(t`x;t`y;yhat;(`coefficient`estimate)!(t`colsx;beta);p`equation);
  };
 
