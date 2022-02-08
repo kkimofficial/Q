@@ -7,5 +7,5 @@
  };
 
 .statq.validation.classimbalance:{[t;c]
-    select n:count i by class from `class xcol .statq.util.sel[t;c]
+    `n xdesc select n:count i by class from `class xcol .statq.util.sel[t;c]
  };
