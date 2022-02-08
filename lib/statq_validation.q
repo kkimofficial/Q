@@ -6,9 +6,9 @@
     flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
  };
 
-.statq.validation.split:{[t;insample]
-    ind:(floor count[ind]*insample)#ind:neg[count t]?count t;
-    :(`insample`outofsample)!(select from t where i in ind;select from t where not i in ind);
+.statq.validation.split:{[t;insampleratio]
+    insample:(floor count[ind]*insampleratio)#ind:neg[count t]?count t;
+    :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
 
 / .statq.validation.classimbalance[.statq.data.iris;`Species]
