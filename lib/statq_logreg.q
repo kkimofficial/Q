@@ -8,3 +8,9 @@
     yhat:.statq.math.sigmoid t[`x]mmu beta:.statq.math.gd[;count[flip t`x]#1f;p`step;p`iterations].statq.logreg.lossgd[t`x;t`y;];
     :(`x`y`yhat`beta`equation)!(t`x;t`y;yhat;(`coefficient`estimate)!(t`colsx;beta);p`equation);
  };
+
+.statq.logreg.outofsample:{[t;m]
+    t:.statq.util.prepare[t;m`equation];
+    yhat:.statq.math.sigmoid t[`x]mmu m[`beta]`estimate;
+    :m,(`x`y`yhat)!(t`x;t`y;yhat);
+ };
