@@ -7,12 +7,12 @@
     flip value flip x
  };
 
-.statq.util.required:{[d;arg]
-    if[count arg:arg where not (arg:(),arg) in key d;'.Q.s1 arg];
+.statq.util.required:{[p;arg]
+    if[count arg:arg where not (arg:(),arg) in key p;'.Q.s1 arg];
  };
 
-.statq.util.optional:{[d;arg;val]
-    (((),arg)!((),val)),d
+.statq.util.optional:{[p;arg;val]
+    (((),arg)!((),val)),p
  };
 
 / .statq.util.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
