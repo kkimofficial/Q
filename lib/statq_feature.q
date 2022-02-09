@@ -1,9 +1,9 @@
-.statq.feature.normalize:{[t;col]
-    flip{[x;y]x[y]:.statq.math.normalize x y;x}/[flip t;(),col]
+.statq.feature.normalize:{[t;columns]
+    flip{x[y]:.statq.math.normalize x y;x}/[flip t;(),columns]
  };
 
-.statq.feature.standardize:{[t;col]
-    flip{[x;y]x[y]:.statq.math.standardize x y;x}/[flip t;(),col]
+.statq.feature.standardize:{[t;columns]
+    flip{x[y]:.statq.math.standardize x y;x}/[flip t;(),columns]
  };
 
 / .statq.feature.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
