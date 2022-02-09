@@ -7,7 +7,7 @@
  };
 
 .statq.validation.split:{[t;insampleratio]
-    insample:(floor count[insample]*insampleratio)#insample:neg[count t]?count t;
+    insample:(floor insampleratio*count insample)#insample:neg[count t]?count t;
     :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
 
