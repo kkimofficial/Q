@@ -6,6 +6,10 @@
     flip{x[y]:.statq.math.standardize x y;x}/[flip t;(),columns]
  };
 
+.statq.feature.lag:{
+    y xprev x
+ };
+
 / .statq.feature.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
 .statq.feature.construct:{[t;e]
     lhs:$[1<count e:"~"vs ssr[e;" ";""];first e;()];
