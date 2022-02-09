@@ -15,6 +15,6 @@
  };
 
 .statq.feature.decompose:{[t;e]
-    t:.statq.util.construct[t;e];
+    t:.statq.feature.construct[t;e];
     (`x`y`colsx`colsy)!(.statq.util.table2matrix t`x;raze .statq.util.table2matrix t`y;cols t`x;cols t`y)
  };
