@@ -6,8 +6,8 @@
     flip{x[y]:.statq.math.standardize x y;x}/[flip t;(),columns]
  };
 
-.statq.feature.lag:{
-    y xprev x
+.statq.feature.lag:{[t;columns;lag]
+    flip{x[y]:z xprev x y;x}[;;lag]/[flip t;(),columns]
  };
 
 / .statq.feature.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
