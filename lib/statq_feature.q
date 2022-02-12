@@ -22,3 +22,7 @@
     t:.statq.feature.construct[t;e];
     (`x`y`colsx`colsy)!(.statq.util.table2matrix t`x;raze .statq.util.table2matrix t`y;cols t`x;cols t`y)
  };
+
+.statq.feature.dummyencode:{[t;columns;omitted]
+    flip{y _x,(.statq.util.concat'[y cross v])!=/:[x y;v:distinct x[y] except z]}/[flip t;(),columns;(),omitted]
+ };
