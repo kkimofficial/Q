@@ -12,7 +12,7 @@
  };
 
 .statq.validation.simplesplit:{[t;insampleratio]
-    insample:(floor insampleratio*count t)#exec i from t;
+    insample:(floor insampleratio*count t)#til count t;
     :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
 
