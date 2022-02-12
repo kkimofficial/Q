@@ -10,6 +10,14 @@
     flip{x[y]:z xprev x y;x}/[flip t;(),columns;(),orders]
  };
 
+.statq.feature.dummyencode:{[t;columns;omitted]
+    flip{y _x,(.statq.util.concat y cross v)!=/:[x y;v:distinct x[y]except z]}/[flip t;(),columns;(),omitted]
+ };
+
+.statq.feature.onehotencode:{[t;columns]
+    .statq.feature.dummyencode[t;columns;count[columns]#`]
+ };
+
 / .statq.feature.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
 .statq.feature.construct:{[t;e]
     lhs:$[1<count e:"~"vs ssr[e;" ";""];first e;()];
@@ -21,12 +29,4 @@
 .statq.feature.decompose:{[t;e]
     t:.statq.feature.construct[t;e];
     (`x`y`colsx`colsy)!(.statq.util.table2matrix t`x;raze .statq.util.table2matrix t`y;cols t`x;cols t`y)
- };
-
-.statq.feature.dummyencode:{[t;columns;omitted]
-    flip{y _x,(.statq.util.concat y cross v)!=/:[x y;v:distinct x[y]except z]}/[flip t;(),columns;(),omitted]
- };
-
-.statq.feature.onehotencode:{[t;columns]
-    .statq.feature.dummyencode[t;columns;count[columns]#`]
  };
