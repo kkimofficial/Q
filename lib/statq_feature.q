@@ -11,7 +11,7 @@
  };
 
 .statq.feature.dummyencode:{[t;columns;omitted]
-    flip{y _x,.statq.util.concat[y cross v]!=/:[x y;v:distinct x[y]except z]}/[flip t;(),columns;(),omitted]
+    flip{(#[key[x]?y;key x],v,(1+key[x]?y)_key x)#x,(v:.statq.util.concat y cross v)!=/:[x y;v:distinct x[y]except z]}/[flip t;(),columns;(),omitted]
  };
 
 .statq.feature.onehotencode:{[t;columns]
