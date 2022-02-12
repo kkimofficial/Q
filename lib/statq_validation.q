@@ -6,7 +6,7 @@
     flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
  };
 
-.statq.validation.split:{[t;insampleratio]
+.statq.validation.randomsplit:{[t;insampleratio]
     insample:(floor insampleratio*count t)#neg[count t]?count t;
     :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
