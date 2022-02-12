@@ -16,5 +16,5 @@
  };
 
 .statq.util.concat:{
-    `$"" sv string x
+    `$$[all 1 = count each x;sv["";] string x;sv["";] each string x]
  };
