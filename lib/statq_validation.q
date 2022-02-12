@@ -11,6 +11,11 @@
     :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
 
+.statq.validation.simplesplit:{[t;insampleratio]
+    insample:(floor insampleratio*count t)#exec i from t;
+    :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
+ };
+
 / .statq.validation.classimbalance[.statq.data.iris;`Species]
 .statq.validation.classimbalance:{[t;c]
     `n xdesc select n:count i by class from `class xcol .statq.util.sel[t;c]
