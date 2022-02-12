@@ -14,3 +14,7 @@
 .statq.util.optional:{[p;arg;val]
     (((),arg)!((),val)),p
  };
+
+.statq.util.concat:{
+    `$"" sv string x
+ };
