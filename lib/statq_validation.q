@@ -40,7 +40,7 @@
 / * @param {float list} y: actual values
 / * @param {float list} yhat: estimated values
 / * @returns {float}: root mean square error
-/ * @example: .statq.validation.mse[1 1 6f;1 3 4f]
+/ * @example: .statq.validation.rmse[1 1 6f;1 3 4f]
 .statq.validation.rmse:{[y;yhat]
     sqrt .statq.validation.mse[y;yhat]
  };
