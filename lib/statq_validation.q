@@ -30,7 +30,7 @@
 / * @returns {float}: mean squared error
 / * @example: .statq.validation.mse[1 1 6f;1 3 4f]
 .statq.validation.mse:{[y;yhat]
-    avg xexp[((),y)-(),yhat;2]
+    avg xexp[y-yhat;2]
  };
 
 / *
@@ -54,7 +54,7 @@
 / * @returns {float}: mean absolute error
 / * @example: .statq.validation.mae[1 1 6f;1 3 4f]
 .statq.validation.mae:{[y;yhat]
-    avg abs((),y)-(),yhat
+    avg abs y-yhat
  };
 
 / *
@@ -66,5 +66,5 @@
 / * @returns {float}: mean absolute percentage error
 / * @example: .statq.validation.mape[1 1 6f;1 3 4f]
 .statq.validation.mape:{[y;yhat]
-    avg abs(((),y)-(),yhat)%(),y
+    avg abs(y-yhat)%y
  };
