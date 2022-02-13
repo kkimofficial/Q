@@ -10,6 +10,10 @@
     flip{x[y]:z xprev x y;x}/[flip t;(),columns;(),orders]
  };
 
+.statq.feature.diff:{[t;columns]
+    flip{x[y]:0,1_deltas x y;x}/[flip t;(),columns]
+ };
+
 .statq.feature.dummyencode:{[t;columns;omitted]
     flip{(#[key[x]?y;key x],v,(1+key[x]?y)_key x)#x,(v:.statq.util.concat y cross v)!=/:[x y;v:distinct x[y]except z]}/[flip t;(),columns;(),omitted]
  };
