@@ -33,6 +33,14 @@
     avg xexp[y-yhat;2]
  };
 
+/ *
+/ * .statq.validation.mse: computes root of the mean squared error between actual and estimated values
+/ * See https://en.wikipedia.org/wiki/Root-mean-square_deviation
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {float}: root of the mean squared error
+/ * @example: .statq.validation.mse[1 1 6f;1 3 4f]
 .statq.validation.rmse:{[y;yhat]
     sqrt .statq.validation.mse[y;yhat]
  };
