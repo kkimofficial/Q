@@ -25,6 +25,10 @@
     avg xexp[y-yhat;2]
  };
 
+.statq.validation.rmse:{[y;yhat]
+    sqrt .statq.validation.mse[y;yhat]
+ };
+
 .statq.validation.mae:{[y;yhat]
     avg abs y-yhat
  };
