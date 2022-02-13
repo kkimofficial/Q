@@ -21,6 +21,14 @@
     `n xdesc select n:count i by class from `class xcol .statq.util.sel[t;c]
  };
 
+/ *
+/ * .statq.validation.mse: computes mean squared error between actual and estimated values
+/ * See https://en.wikipedia.org/wiki/Mean_squared_error
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {float}: mean squared error
+/ * @example: .statq.validation.mse[1 1 6f;1 3 4f]
 .statq.validation.mse:{[y;yhat]
     avg xexp[y-yhat;2]
  };
