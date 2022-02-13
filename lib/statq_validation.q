@@ -32,3 +32,7 @@
 .statq.validation.mae:{[y;yhat]
     avg abs y-yhat
  };
+
+.statq.validation.mape:{[y;yhat]
+    avg abs(y-yhat)%y
+ };
