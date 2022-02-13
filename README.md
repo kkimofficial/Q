@@ -8,5 +8,5 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 ```
 ## Logistic Regression
 ```q
-.statq.logreg.insample [([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 1 1 0 0f);] (`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1)
+.statq.logreg.insample [([]x1: 1 5 200f;x2: 6 3 40f;y: 1 1 0f);] (`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1)
 ```
