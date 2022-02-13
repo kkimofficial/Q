@@ -1,8 +1,8 @@
 .statq.validation.confusionmatrix:{[y;yhat]
     tp:count yhat where yhat and y;
-    tn:count yhat where not[yhat] and not y;
+    tn:count yhat where not[yhat]and not y;
     fp:count yhat where yhat and not y;
-    fn:count yhat where not[yhat] and y;
+    fn:count yhat where not[yhat]and y;
     flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
  };
 
@@ -54,7 +54,7 @@
 / * @returns {float}: mean absolute error
 / * @example: .statq.validation.mae[1 1 6f;1 3 4f]
 .statq.validation.mae:{[y;yhat]
-    avg abs ((),y)-(),yhat
+    avg abs((),y)-(),yhat
  };
 
 / *
