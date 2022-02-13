@@ -22,7 +22,7 @@
  };
 
 / *
-/ * .statq.validation.mse: computes mean squared error between actual and estimated values
+/ * .statq.validation.mse: computes mean squared deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Mean_squared_error
 / *
 / * @param {float list} y: actual values
@@ -34,7 +34,7 @@
  };
 
 / *
-/ * .statq.validation.mse: computes root of the mean squared error between actual and estimated values
+/ * .statq.validation.rmse: computes root of the mean squared deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Root-mean-square_deviation
 / *
 / * @param {float list} y: actual values
@@ -45,6 +45,14 @@
     sqrt .statq.validation.mse[y;yhat]
  };
 
+/ *
+/ * .statq.validation.mae: computes mean absolute deviation between actual and estimated values
+/ * See https://en.wikipedia.org/wiki/Mean_absolute_error
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {float}: mean absolute error
+/ * @example: .statq.validation.mae[1 1 6f;1 3 4f]
 .statq.validation.mae:{[y;yhat]
     avg abs y-yhat
  };
