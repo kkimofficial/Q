@@ -57,6 +57,14 @@
     avg abs y-yhat
  };
 
+/ *
+/ * .statq.validation.mape: computes mean absolute percentage deviation between actual and estimated values
+/ * See https://en.wikipedia.org/wiki/Mean_absolute_percentage_error
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {float}: mean absolute percentage error
+/ * @example: .statq.validation.mape[1 1 6f;1 3 4f]
 .statq.validation.mape:{[y;yhat]
     avg abs(y-yhat)%y
  };
