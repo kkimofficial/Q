@@ -2,6 +2,6 @@
 
 DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT EMPLOYER OF MINE
 
-### 1. Linear Models
+## 1) Linear Models
 * Linear Regression
 * Logistic Regression
