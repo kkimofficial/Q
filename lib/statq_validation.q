@@ -30,7 +30,7 @@
 / * @returns {float}: mean squared error
 / * @example: .statq.validation.mse[1 1 6f;1 3 4f]
 .statq.validation.mse:{[y;yhat]
-    avg xexp[y-yhat;2]
+    avg xexp[((),y)-(),yhat;2]
  };
 
 / *
