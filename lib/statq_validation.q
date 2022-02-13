@@ -20,3 +20,11 @@
 .statq.validation.classimbalance:{[t;c]
     `n xdesc select n:count i by class from `class xcol .statq.util.sel[t;c]
  };
+
+.statq.validation.mse:{[y;yhat]
+    avg xexp[y-yhat;2]
+ };
+
+.statq.validation.mae:{[y;yhat]
+    avg abs y-yhat
+ };
