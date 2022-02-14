@@ -1,3 +1,11 @@
+/ *
+/ * .statq.validation.confusionmatrix: computes matrix of errors for actual vs. estimated values
+/ * See https://en.wikipedia.org/wiki/Confusion_matrix
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {float}: mean squared error
+/ * @example: .statq.validation.confusionmatrix[1101b;1001b]
 .statq.validation.confusionmatrix:{[y;yhat]
     tp:count yhat where yhat and y;
     tn:count yhat where not[yhat]and not y;
