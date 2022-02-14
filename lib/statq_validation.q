@@ -4,7 +4,7 @@
 / *
 / * @param {float list} y: actual values
 / * @param {float list} yhat: estimated values
-/ * @returns {float}: mean squared error
+/ * @returns {table}: confusion matrix
 / * @example: .statq.validation.confusionmatrix[1101b;1001b]
 .statq.validation.confusionmatrix:{[y;yhat]
     tp:count yhat where yhat and y;
