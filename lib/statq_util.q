@@ -8,7 +8,7 @@
  };
 
 .statq.util.required:{[p;arg]
-    $[count arg:arg where not (arg:(),arg) in key p;'.Q.s1 arg;p]
+    $[count arg:arg where not(arg:(),arg)in key p;'.Q.s1 arg;p]
  };
 
 .statq.util.optional:{[p;arg;val]
@@ -16,5 +16,5 @@
  };
 
 .statq.util.concat:{
-    `$$[all 1 = count each x;sv["";] string x;sv["";] each string x]
+    `$$[all 1=count each x;sv["";]string x;sv["";]each string x]
  };
