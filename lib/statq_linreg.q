@@ -19,7 +19,7 @@
  };
 
 / *
-/ * .statq.linreg.r2: returns proportion of variance explained by explanatory variables
+/ * .statq.linreg.r2: computes proportion of variance explained by explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
 / * @param {dictionary} m: estimated model
@@ -30,7 +30,7 @@
  };
 
 / *
-/ * .statq.linreg.r2adj: returns proportion of variance explained by explanatory variables
+/ * .statq.linreg.r2adj: computes R squared adjusted for the numbers of explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
 / * @param {dictionary} m: estimated model
