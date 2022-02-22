@@ -5,13 +5,21 @@
 / * @param {table} t: table with explanatory and dependent variables
 / * @param {dictionary} p: dictionary of parameters
 / * @returns {dictionary}: model estimates
-/ * @example: .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);enlist[`equation]!enlist "y~intercept+x1"]
+/ * @example: .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.insample:{[t;p]
     t:.statq.util.prepare[t;].statq.util.required[p;`equation]`equation;
     yhat:t[`x]mmu beta:.statq.matrix.ols[t`x;t`y];
     :(`x`y`yhat`beta`equation)!(t`x;t`y;yhat;(`coefficient`estimate)!(t`colsx;beta);p`equation);
  };
 
+/ *
+/ * .statq.linreg.outofsample: estimates the data given model fitted in-sample
+/ * See https://en.wikipedia.org/wiki/Cross-validation_(statistics)
+/ *
+/ * @param {table} t: table with explanatory and dependent variables
+/ * @param {dictionary} m: model estimates from in-sample
+/ * @returns {dictionary}: out-of-sample model estimates
+/ * @example: .statq.linreg.outofsample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);] .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.outofsample:{[t;m]
     t:.statq.util.prepare[t;m`equation];
     yhat:t[`x]mmu m[`beta]`estimate;
@@ -22,7 +30,7 @@
 / * .statq.linreg.r2: computes proportion of variance explained by explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
-/ * @param {dictionary} m: estimated model
+/ * @param {dictionary} m: model estimates
 / * @returns {float}: R squared
 / * @example: .statq.linreg.r2 .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.r2:{[m]
@@ -33,7 +41,7 @@
 / * .statq.linreg.r2adj: computes R squared adjusted for the numbers of explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
-/ * @param {dictionary} m: estimated model
+/ * @param {dictionary} m: model estimates
 / * @returns {float}: adjusted R squared
 / * @example: .statq.linreg.r2adj .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.r2adj:{[m]
