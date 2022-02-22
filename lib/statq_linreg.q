@@ -18,6 +18,13 @@
     :m,(`x`y`yhat)!(t`x;t`y;yhat);
  };
 
+/ *
+/ * .statq.linreg.r2: returns proportion of variance explained by explanatory variables
+/ * See https://en.wikipedia.org/wiki/Coefficient_of_determination
+/ *
+/ * @param {dictionary} m: estimated model
+/ * @returns {float}: R squared
+/ * @example: .statq.linreg.r2 .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.r2:{[m]
     1-sum[(m[`y]-m`yhat)xexp 2]%sum(m[`y]-avg m`y)xexp 2
  };
