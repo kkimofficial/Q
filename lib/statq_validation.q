@@ -10,6 +10,14 @@
     :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
  };
 
+/ *
+/ * .statq.validation.bootstrap: performs random sampling with replacement
+/ * See https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
+/ *
+/ * @param {table} t: the data from which to sample
+/ * @param {int} n: required sample size
+/ * @returns {table}: bootstrapped sample
+/ * @example: .statq.validation.bootstrap[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);10]
 .statq.validation.bootstrap:{[t;n]
     n?t
  };
