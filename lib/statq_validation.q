@@ -1,12 +1,11 @@
 
 
 .statq.validation.randomsplit:{[t;insampleratio]
-    insample:(floor insampleratio*count t)#neg[count t]?count t;
-    :(`insample`outofsample)!(select from t where i in insample;select from t where not i in insample);
+    :(`outofsample`insample)!(t except insample;insample:neg[floor min[insampleratio,1f]*count t]?t);
  };
 
 .statq.validation.simplesplit:{[t;insampleratio]
-    :(`outofsample`insample)!(t except insample;insample:t til floor min[insampleratio,1f]*count t);
+    :(`outofsample`insample)!(t except insample;insample:(floor min[insampleratio,1f]*count t)#t);
  };
 
 / *
