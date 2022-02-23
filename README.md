@@ -2,7 +2,9 @@
 
 DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT EMPLOYER OF MINE
 
-### kdb+/q (https://en.wikipedia.org/wiki/Kdb+)
+## kdb+/q (https://en.wikipedia.org/wiki/Kdb+)
+
+https://code.kx.com/q/
 
 ## Linear Regression
 ```q
