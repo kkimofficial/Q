@@ -6,7 +6,7 @@
  };
 
 .statq.validation.simplesplit:{[t;insampleratio]
-    :(`outofsample`insample)!(t except insample;insample:(floor insampleratio*count t)#t);
+    :(`outofsample`insample)!(t except insample;insample:t til floor min[insampleratio,1f]*count t);
  };
 
 / *
