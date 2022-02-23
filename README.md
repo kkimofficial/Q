@@ -4,8 +4,8 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 
 ## Set up kdb+/q
 
-What is kdb+/q - https://en.wikipedia.org/wiki/Kdb+
-Set up kdb+/q - https://code.kx.com/q/
+- What is kdb+/q - https://en.wikipedia.org/wiki/Kdb+
+- Set up kdb+/q - https://code.kx.com/q/
 
 ## Linear Regression
 ```q
