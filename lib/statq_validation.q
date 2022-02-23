@@ -1,18 +1,4 @@
-/ *
-/ * .statq.validation.confusionmatrix: computes matrix of errors for actual vs. estimated values
-/ * See https://en.wikipedia.org/wiki/Confusion_matrix
-/ *
-/ * @param {float list} y: actual values
-/ * @param {float list} yhat: estimated values
-/ * @returns {table}: confusion matrix
-/ * @example: .statq.validation.confusionmatrix[1101b;1001b]
-.statq.validation.confusionmatrix:{[y;yhat]
-    tp:count yhat where yhat and y;
-    tn:count yhat where not[yhat]and not y;
-    fp:count yhat where yhat and not y;
-    fn:count yhat where not[yhat]and y;
-    flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
- };
+
 
 .statq.validation.randomsplit:{[t;insampleratio]
     insample:(floor insampleratio*count t)#neg[count t]?count t;
@@ -79,4 +65,20 @@
 / * @example: .statq.validation.mape[1 1 6f;1 3 4f]
 .statq.validation.mape:{[y;yhat]
     avg abs(y-yhat)%y
+ };
+
+/ *
+/ * .statq.validation.confusionmatrix: computes matrix of errors for actual vs. estimated values
+/ * See https://en.wikipedia.org/wiki/Confusion_matrix
+/ *
+/ * @param {float list} y: actual values
+/ * @param {float list} yhat: estimated values
+/ * @returns {table}: confusion matrix
+/ * @example: .statq.validation.confusionmatrix[1101b;1001b]
+.statq.validation.confusionmatrix:{[y;yhat]
+    tp:count yhat where yhat and y;
+    tn:count yhat where not[yhat]and not y;
+    fp:count yhat where yhat and not y;
+    fn:count yhat where not[yhat]and y;
+    flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
  };
