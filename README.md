@@ -2,11 +2,11 @@
 
 DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT EMPLOYER OF MINE
 
-## Set up kdb+/q
+## Set up kdb+
 
-- What is kdb+/q - https://en.wikipedia.org/wiki/Kdb+
-- Set up kdb+/q - https://code.kx.com/q/
-- Basics of kdb+ and q language - https://code.kx.com/q4m3/
+- What is kdb+ - https://en.wikipedia.org/wiki/Kdb+
+- How to set up kdb+ - https://code.kx.com/q/
+- Introduction to kdb+ and q language - https://code.kx.com/q4m3/
 
 ## Linear Regression
 ```q
