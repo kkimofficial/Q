@@ -26,7 +26,13 @@
     floor x+0.5
  };
 
-/ .statq.math.sigmoid 0.4
+/ *
+/ * .statq.math.round: computes  sigmoid (inverse logit) function
+/ * See https://en.wikipedia.org/wiki/Sigmoid_function
+/ *
+/ * @param {float} x: argument value
+/ * @returns {int}: inverse logit value
+/ * @example: .statq.math.sigmoid 0.4
 .statq.math.sigmoid:{
     1%1+exp neg x
  };
