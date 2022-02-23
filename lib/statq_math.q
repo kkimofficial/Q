@@ -27,7 +27,7 @@
  };
 
 / *
-/ * .statq.math.round: computes  sigmoid (inverse logit) function
+/ * .statq.math.sigmoid: computes  sigmoid (inverse logit) function
 / * See https://en.wikipedia.org/wiki/Sigmoid_function
 / *
 / * @param {float} x: argument value
