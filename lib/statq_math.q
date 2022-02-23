@@ -3,7 +3,14 @@
     x+(z?1f)*y-x
  };
 
-/ .statq.math.percentile[1 2 3 4 5;0.5]
+/ *
+/ * .statq.math.percentile:
+/ * See https://en.wikipedia.org/wiki/Percentile
+/ *
+/ * @param {float list} x:
+/ * @param {float} y:
+/ * @returns {float}: 
+/ * @example: .statq.math.percentile[1 2 3 4 5f;0.5]
 .statq.math.percentile:{
     x min(-1+(#:)x),(_:)y*(#:)x:asc x
  };
@@ -14,7 +21,7 @@
 / *
 / * @param {float} x: number to round
 / * @returns {int}: rounded value
-/ * @example: 
+/ * @example: .statq.math.round 0.6
 .statq.math.round:{
     floor x+0.5
  };
