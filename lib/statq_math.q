@@ -8,6 +8,13 @@
     x min(-1+(#:)x),(_:)y*(#:)x:asc x
  };
 
+/ *
+/ * .statq.math.round: computes the nearest integer
+/ * See https://en.wikipedia.org/wiki/Rounding
+/ *
+/ * @param {float} x: number to round
+/ * @returns {int}: rounded value
+/ * @example: 
 .statq.math.round:{
     floor x+0.5
  };
