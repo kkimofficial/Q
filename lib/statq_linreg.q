@@ -33,7 +33,7 @@
 / * @param {float} lambda: regularization coefficient
 / * @returns {float list}: beta estimates
 / * @example: .statq.linreg.ridge[(1 1f;1 5f;1 4f);3 11 9f;0.1]
-.statq.linreg.ridge:{
+.statq.linreg.ridge:{[x;y;lambda]
     .statq.linreg.tikhonovwls[x;y;.statq.matrix.identity count x;sqrt[lambda]*.statq.matrix.identity count flip x]
  };
 
