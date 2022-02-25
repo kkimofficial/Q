@@ -37,7 +37,14 @@
     1%1+exp neg x
  };
 
-/ .statq.math.distance.euclidean[1 2 3 4f;5 6 7 8f]
+/ *
+/ * .statq.math.distance.euclidean: computes the Euclidian distance between two points
+/ * See https://en.wikipedia.org/wiki/Euclidean_distance
+/ *
+/ * @param {float} x: first point coordinates
+/ * @param {float} y: second point coordinates
+/ * @returns {float}: Euclidian distance between two points
+/ * @example: .statq.math.distance.euclidean[1 2 3f;5 6 7f]
 .statq.math.distance.euclidean:{
     sqrt sum xexp[y-x;2]
  };
