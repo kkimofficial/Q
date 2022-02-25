@@ -1,5 +1,5 @@
 / *
-/ * .statq.linreg.tikhonovweightedols: performs weighted least squares with tikhonov regularization
+/ * .statq.linreg.tikhonovweightedols: performs weighted least squares with tikhonov regularization beta = (x'*w*x + gamma'*gamma)^-1*x'*w*y
 / * See https://en.wikipedia.org/wiki/Weighted_least_squares, https://en.wikipedia.org/wiki/Tikhonov_regularization
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -10,6 +10,18 @@
 / * @example: .statq.linreg.tikhonovweightedols[(1 100f;1 5f;1 4f);3 11 9f;(0 0 0f;0 1 0f;0 0 1f);(0 0f;0 0f;0 0f)]
 .statq.linreg.tikhonovweightedols:{[x;y;w;gamma]
     ((inv[((flip[x]mmu w)mmu x)+flip[gamma]mmu gamma]mmu flip x)mmu w)mmu y
+ };
+
+/ *
+/ * .statq.matrix.ols: returns ordinary least squares solution for y = x'beta
+/ * See https://en.wikipedia.org/wiki/Ordinary_least_squares
+/ *
+/ * @param {float matrix} x: matrix of explanatory observations
+/ * @param {float list} y: list of response observations
+/ * @returns {float list}: beta estimates
+/ * @example: .statq.matrix.ols[(1 1f;1 5f;1 4f);3 11 9f]
+.statq.matrix.ols:{
+    .statq.linreg.tikhonovweightedols[x;y;]
  };
 
 / *
