@@ -21,7 +21,7 @@
 / * @returns {float list}: beta estimates
 / * @example: .statq.linreg.ols[(1 1f;1 5f;1 4f);3 11 9f]
 .statq.linreg.ols:{
-    .statq.linreg.tikhonovwls[x;y;]
+    .statq.linreg.tikhonovwls[x;y;.statq.matrix.identity count x;0*.statq.matrix.identity count flip x]
  };
 
 / *
