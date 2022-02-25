@@ -58,7 +58,7 @@
 / * @param {float list} beta: initial value of parameters
 / * @param {float} step: alpha of gradient descent
 / * @param {int} iterations: number of iterations to perform gradient descent
-/ * @returns {float list}: 
+/ * @returns {float list}: approximated argmin of the derivative
 / * @example: .statq.math.gd[{(2*x)-4};1;0.1;100]
 .statq.math.gd:{[derivative;beta;step;iterations]
     iterations{[beta;f;alpha]beta-alpha*f beta}[;derivative;step]/beta
