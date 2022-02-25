@@ -13,7 +13,7 @@
  };
 
 / *
-/ * .statq.linreg.ols: returns ordinary least squares solution for y = x'beta
+/ * .statq.linreg.ols: computes ordinary least squares solution for y = x'beta
 / * See https://en.wikipedia.org/wiki/Ordinary_least_squares
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -25,7 +25,7 @@
  };
 
 / *
-/ * .statq.linreg.ridge: returns ordinary least squares solution for y = x'beta
+/ * .statq.linreg.ridge: performs ridge regilarized least squares
 / * See https://en.wikipedia.org/wiki/Ridge_regression
 / *
 / * @param {float matrix} x: matrix of explanatory observations
