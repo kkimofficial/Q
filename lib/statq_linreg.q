@@ -25,6 +25,19 @@
  };
 
 / *
+/ * .statq.linreg.ridge: returns ordinary least squares solution for y = x'beta
+/ * See https://en.wikipedia.org/wiki/Ridge_regression
+/ *
+/ * @param {float matrix} x: matrix of explanatory observations
+/ * @param {float list} y: list of response observations
+/ * @param {float} lambda: regularization coefficient
+/ * @returns {float list}: beta estimates
+/ * @example: .statq.linreg.ridge[(1 1f;1 5f;1 4f);3 11 9f;0.1]
+.statq.linreg.ridge:{
+    .statq.linreg.tikhonovwls[x;y;.statq.matrix.identity count x;sqrt[lambda]*.statq.matrix.identity count flip x]
+ };
+
+/ *
 / * .statq.linreg.insample: fits a linear function between explanatory and dependent variables
 / * See https://en.wikipedia.org/wiki/Linear_regression
 / *
