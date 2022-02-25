@@ -10,13 +10,12 @@
  };
 
 / *
-/ * .statq.matrix.ols: returns ordinary least squares solution for y = x'beta
-/ * See https://en.wikipedia.org/wiki/Ordinary_least_squares
+/ * .statq.matrix.diagonal: returns diagonal matrix with x as diagonal entries
+/ * See https://en.wikipedia.org/wiki/Diagonal_matrix
 / *
-/ * @param {float matrix} x: matrix of explanatory observations
-/ * @param {float list} y: list of response observations
-/ * @returns {float list}: beta estimates
-/ * @example: .statq.matrix.ols[(1 1f;1 5f;1 4f);3 11 9f]
-.statq.matrix.ols:{
-    ((inv flip[x]mmu x)mmu flip x)mmu y
+/ * @param {int} x: diagonal elements
+/ * @returns {int matrix}: diagonal matrix of order of size of x
+/ * @example: .statq.matrix.diagonal 1 2 3
+.statq.matrix.diagonal:{
+    @[count[x]#0;;:;]'[til count x;x]
  };
