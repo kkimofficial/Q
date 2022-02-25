@@ -6,7 +6,7 @@
 / * @returns {int matrix}: identity matrix of order x
 / * @example: .statq.matrix.identity 3
 .statq.matrix.identity:{
-    (2#x)#1,x#0
+    .statq.matrix.diagonal x#1f
  };
 
 / *
