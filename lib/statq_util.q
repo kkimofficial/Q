@@ -1,3 +1,7 @@
+.statq.util.list:{
+    $[type[x] in (10h;-10h);enlist x;(),x]
+ };
+
 .statq.util.sel:{
     ((),y)#x
  };
