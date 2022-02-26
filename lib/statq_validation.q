@@ -1,11 +1,11 @@
 
 
-.statq.validation.randomsplit:{[t;insampleratio]
-    :(`outofsample`insample)!(t except insample;insample:neg[floor min[insampleratio,1f]*count t]?t);
+.statq.validation.randomsplit:{[t;allocation]
+    t 1_{x,enlist (z til floor min[y,1f]*count z) except raze x}[;;neg[count t]?til count t]/[enlist ();sums allocation]
  };
 
-.statq.validation.simplesplit:{[t;insampleratio]
-    :(`outofsample`insample)!(t except insample;insample:(floor min[insampleratio,1f]*count t)#t);
+.statq.validation.simplesplit:{[t;allocation]
+    t 1_{x,enlist (z til floor min[y,1f]*count z) except raze x}[;;til count t]/[enlist ();sums allocation]
  };
 
 / *
