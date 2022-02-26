@@ -25,6 +25,19 @@
  };
 
 / *
+/ * .statq.linreg.wls: performs weighted least squares
+/ * See https://en.wikipedia.org/wiki/Weighted_least_squares
+/ *
+/ * @param {float matrix} x: matrix of explanatory observations
+/ * @param {float list} y: list of response observations
+/ * @param {float list} w: list of weights for explanatory observations
+/ * @returns {float list}: beta estimates
+/ * @example: .statq.linreg.wls[(1 100f;1 5f;1 4f);3 11 9f;0 1 1f]
+.statq.linreg.wls:{[x;y;w]
+    .statq.linreg.tikhonovwls[x;y;.statq.matrix.diagonal w;0*.statq.matrix.identity count flip x]
+ };
+
+/ *
 / * .statq.linreg.ridge: performs ridge regilarized least squares
 / * See https://en.wikipedia.org/wiki/Ridge_regression
 / *
