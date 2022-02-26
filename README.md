@@ -10,11 +10,12 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 
 ## Set up statq
 
-## Linear Regression
+### Linear Regression
 ```q
 .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);] (enlist`equation)!(enlist"y~intercept+x1")
 ```
-## Logistic Regression
+### Logistic Regression
 ```q
 .statq.logreg.insample[([]x1:1 5 200f;x2:6 3 40f;y:1 1 0f);] (`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1)
 ```
+### Validation
