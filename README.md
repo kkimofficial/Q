@@ -10,6 +10,8 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 
 ## Set up statq
 
+## Examples
+
 ### Linear Regression
 ```q
 .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);] (enlist`equation)!(enlist"y~intercept+x1")
