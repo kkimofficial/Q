@@ -1,5 +1,5 @@
 / *
-/ * .statq.linreg.tikhonovwls: performs weighted least squares with tikhonov regularization beta = (x'*w*x + gamma'*gamma)^-1*x'*w*y
+/ * Performs weighted least squares with tikhonov regularization beta = (x'*w*x + gamma'*gamma)^-1*x'*w*y
 / * See https://en.wikipedia.org/wiki/Weighted_least_squares, https://en.wikipedia.org/wiki/Tikhonov_regularization
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -13,7 +13,7 @@
  };
 
 / *
-/ * .statq.linreg.ols: computes ordinary least squares solution for y = x'beta
+/ * Computes ordinary least squares solution for y = x'beta
 / * See https://en.wikipedia.org/wiki/Ordinary_least_squares
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -25,7 +25,7 @@
  };
 
 / *
-/ * .statq.linreg.wls: performs weighted least squares
+/ * Performs weighted least squares
 / * See https://en.wikipedia.org/wiki/Weighted_least_squares
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -38,7 +38,7 @@
  };
 
 / *
-/ * .statq.linreg.ridge: performs ridge regilarized least squares
+/ * Performs ridge regilarized least squares
 / * See https://en.wikipedia.org/wiki/Ridge_regression
 / *
 / * @param {float matrix} x: matrix of explanatory observations
@@ -51,7 +51,7 @@
  };
 
 / *
-/ * .statq.linreg.insample: fits a linear function between explanatory and dependent variables
+/ * Fits a linear function between explanatory and dependent variables
 / * See https://en.wikipedia.org/wiki/Linear_regression
 / *
 / * @param {table} t: table with explanatory and dependent variables
@@ -65,7 +65,7 @@
  };
 
 / *
-/ * .statq.linreg.outofsample: estimates the data given model fitted in-sample
+/ * Estimates the data given model fitted in-sample
 / * See https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 / *
 / * @param {table} t: table with explanatory and dependent variables
@@ -79,7 +79,7 @@
  };
 
 / *
-/ * .statq.linreg.r2: computes proportion of variance explained by explanatory variables
+/ * Computes proportion of variance explained by explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
 / * @param {dictionary} m: model estimates
@@ -90,7 +90,7 @@
  };
 
 / *
-/ * .statq.linreg.r2adj: computes R squared adjusted for the numbers of explanatory variables
+/ * Computes R squared adjusted for the numbers of explanatory variables
 / * See https://en.wikipedia.org/wiki/Coefficient_of_determination
 / *
 / * @param {dictionary} m: model estimates
