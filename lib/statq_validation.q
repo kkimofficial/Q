@@ -1,11 +1,11 @@
 
 
 .statq.validation.randomsplit:{[t;allocation]
-    t 1_{x,enlist(z til floor min[y,1f]*count z)except raze x}[;;neg[count t]?til count t]/[enlist();sums allocation]
+    t 1_{x,enlist(z til .statq.math.round min[y,1f]*count z)except raze x}[;;neg[count t]?til count t]/[enlist();sums allocation]
  };
 
 .statq.validation.simplesplit:{[t;allocation]
-    t 1_{x,enlist(z til floor min[y,1f]*count z)except raze x}[;;til count t]/[enlist();sums allocation]
+    t 1_{x,enlist(z til .statq.math.round min[y,1f]*count z)except raze x}[;;til count t]/[enlist();sums allocation]
  };
 
 / *
