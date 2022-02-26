@@ -7,7 +7,7 @@
 / * @param {float matrix} w: weights matrix
 / * @param {float matrix} gamma: tikhonov matrix
 / * @returns {float list}: beta estimates
-/ * @example: .statq.linreg.tikhonovwls[(1 100f;1 5f;1 4f);3 11 9f;(0 0 0f;0 1 0f;0 0 1f);(0 0f;0 0f;0 0f)]
+/ * @example: .statq.linreg.tikhonovwls[(1 100f;1 5f;1 4f);3 11 9f;(0 0 0f;0 1 0f;0 0 1f);(0 0f;0 0f)]
 .statq.linreg.tikhonovwls:{[x;y;w;gamma]
     ((inv[((flip[x]mmu w)mmu x)+flip[gamma]mmu gamma]mmu flip x)mmu w)mmu y
  };
