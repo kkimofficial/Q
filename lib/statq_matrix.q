@@ -1,5 +1,5 @@
 / *
-/ * Computes identity matrix of order x
+/ * Constructs identity matrix of order x
 / * See https://en.wikipedia.org/wiki/Identity_matrix
 / *
 / * @param {int} x: order of identity matrix
@@ -10,7 +10,7 @@
  };
 
 / *
-/ * Computes diagonal matrix with x as diagonal entries
+/ * Constructs diagonal matrix with x as diagonal entries
 / * See https://en.wikipedia.org/wiki/Diagonal_matrix
 / *
 / * @param {int} x: diagonal elements
