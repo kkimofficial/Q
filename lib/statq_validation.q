@@ -88,3 +88,7 @@
     fn:count yhat where not[yhat]and y;
     flip(``predictedpositive`predictednegative)!(`actualpositive`actualnegative;tp,fp;fn,tn)
  };
+
+.statq.validation.accuracy:{[y;yhat]
+    {(x[0]+x 3)%sum x}raze raze each 1_flip .statq.validation.confusionmatrix[.statq.math.round y;.statq.math.round yhat]
+ };
