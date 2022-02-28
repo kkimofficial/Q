@@ -1,4 +1,11 @@
-/ .statq.validation.kfold[update Species:?[Species=`setosa;1f;0f] from .statq.data.iris;5;.statq.logreg.insample[;(enlist`equation)!(enlist"Species~Sepal.Width+Sepal.Length")];.statq.logreg.outofsample]
+/ *
+/ * Performs random sampling with replacement
+/ * See https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
+/ *
+/ * @param {table} t: the data from which to sample
+/ * @param {int} n: required sample size
+/ * @returns {table}: bootstrapped sample
+/ * @example: .statq.validation.kfold[update Species:?[Species=`setosa;1f;0f] from .statq.data.iris;5;.statq.logreg.insample[;(enlist`equation)!(enlist"Species~Sepal.Width+Sepal.Length")];.statq.logreg.outofsample]
 .statq.validation.kfold:{[t;k;modelinsample;modeloutofsample]
     {last[z][x y;]first[z]x except x y}[;;modelinsample,modeloutofsample]/:[t;.statq.validation.randomsplit[til count t;k#1%k]]
  };
@@ -12,7 +19,7 @@
  };
 
 / *
-/ * .statq.validation.bootstrap: performs random sampling with replacement
+/ * Performs random sampling with replacement
 / * See https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
 / *
 / * @param {table} t: the data from which to sample
@@ -29,7 +36,7 @@
  };
 
 / *
-/ * .statq.validation.mse: computes mean squared deviation between actual and estimated values
+/ * Computes mean squared deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Mean_squared_error
 / *
 / * @param {float list} y: actual values
@@ -41,7 +48,7 @@
  };
 
 / *
-/ * .statq.validation.rmse: computes root of the mean squared deviation between actual and estimated values
+/ * Computes root of the mean squared deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Root-mean-square_deviation
 / *
 / * @param {float list} y: actual values
@@ -53,7 +60,7 @@
  };
 
 / *
-/ * .statq.validation.mae: computes mean absolute deviation between actual and estimated values
+/ * Computes mean absolute deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Mean_absolute_error
 / *
 / * @param {float list} y: actual values
@@ -65,7 +72,7 @@
  };
 
 / *
-/ * .statq.validation.mape: computes mean absolute percentage deviation between actual and estimated values
+/ * Computes mean absolute percentage deviation between actual and estimated values
 / * See https://en.wikipedia.org/wiki/Mean_absolute_percentage_error
 / *
 / * @param {float list} y: actual values
@@ -77,7 +84,7 @@
  };
 
 / *
-/ * .statq.validation.confusionmatrix: computes matrix of errors for actual vs. estimated values
+/ * Computes matrix of errors for actual vs. estimated values
 / * See https://en.wikipedia.org/wiki/Confusion_matrix
 / *
 / * @param {float list} y: actual values
