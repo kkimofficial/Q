@@ -1,4 +1,7 @@
 
+.statq.validation.kfold:{[t;k;modelinsample;modeloutofsample]
+    {last[z][x y;]first[z]x except x y}[;;modelinsample,modeloutofsample]/:[t;.statq.validation.randomsplit[til count t;k#1%k]]
+ };
 
 .statq.validation.randomsplit:{[t;allocation]
     t {x,enlist(z til .statq.math.round min[y,1f]*count z)except raze x}[;;neg[count t]?til count t]/[();sums allocation]
