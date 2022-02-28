@@ -1,9 +1,11 @@
 / *
-/ * Performs random sampling with replacement
-/ * See https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
+/ * Performs insample.outofsample k models based on k split of the original data
+/ * See https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 / *
-/ * @param {table} t: the data from which to sample
-/ * @param {int} n: required sample size
+/ * @param {table} t: the data to split
+/ * @param {int} k: number of folds
+/ * @param {function} modelinsample: required sample size
+/ * @param {function} modeloutofsample: required sample size
 / * @returns {table}: bootstrapped sample
 / * @example: .statq.validation.kfold[update Species:?[Species=`setosa;1f;0f] from .statq.data.iris;5;.statq.logreg.insample[;(enlist`equation)!(enlist"Species~Sepal.Width+Sepal.Length")];.statq.logreg.outofsample]
 .statq.validation.kfold:{[t;k;modelinsample;modeloutofsample]
