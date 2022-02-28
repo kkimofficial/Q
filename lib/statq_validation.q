@@ -1,5 +1,5 @@
 / *
-/ * Performs insample.outofsample k models based on k split of the original data
+/ * Performs insample/outofsample k models based on k split of the original data
 / * See https://en.wikipedia.org/wiki/Cross-validation_(statistics)
 / *
 / * @param {table} t: the data to split
