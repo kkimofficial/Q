@@ -4,8 +4,8 @@
 / *
 / * @param {table} t: the data to split
 / * @param {int} k: number of folds
-/ * @param {function} modelinsample: required sample size
-/ * @param {function} modeloutofsample: required sample size
+/ * @param {function} modelinsample: function to fit in-sample
+/ * @param {function} modeloutofsample: function to perform out-of-sample
 / * @returns {dictionary list}: list of models
 / * @example: .statq.validation.kfold[update Species:?[Species=`setosa;1f;0f] from .statq.data.iris;5;.statq.logreg.insample[;(enlist`equation)!(enlist"Species~Sepal.Width+Sepal.Length")];.statq.logreg.outofsample]
 .statq.validation.kfold:{[t;k;modelinsample;modeloutofsample]
