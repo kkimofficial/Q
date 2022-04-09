@@ -1,4 +1,12 @@
-/ .statq.math.uniform[-1;1;100]
+/ *
+/ * Performs sampling from uniform distribution within given bounds
+/ * See https://en.wikipedia.org/wiki/Continuous_uniform_distribution
+/ *
+/ * @param {float} x: left bound
+/ * @param {float} y: right bound
+/ * @param {float} z: sample size
+/ * @returns {float list}: 
+/ * @example: .statq.math.uniform[-1;1;100]
 .statq.math.runiform:{
     x+(z?1f)*y-x
  };
@@ -16,7 +24,7 @@
  };
 
 / *
-/ * .statq.math.round: computes the nearest integer
+/ * Computes the nearest integer
 / * See https://en.wikipedia.org/wiki/Rounding
 / *
 / * @param {float} x: number to round
@@ -27,7 +35,7 @@
  };
 
 / *
-/ * .statq.math.sigmoid: computes sigmoid (inverse logit) function
+/ * Computes sigmoid (inverse logit) function
 / * See https://en.wikipedia.org/wiki/Sigmoid_function
 / *
 / * @param {float} x: argument value
@@ -38,7 +46,7 @@
  };
 
 / *
-/ * .statq.math.distance.euclidean: computes the Euclidian distance between two points
+/ * Computes the Euclidian distance between two points
 / * See https://en.wikipedia.org/wiki/Euclidean_distance
 / *
 / * @param {float} x: first point coordinates
@@ -58,7 +66,7 @@
  };
 
 / *
-/ * .statq.math.gd: performs a gradient descent over a derivative function
+/ * Performs a gradient descent over a derivative function
 / * See https://en.wikipedia.org/wiki/Gradient_descent
 / *
 / * @param {function} derivative: derivative function
