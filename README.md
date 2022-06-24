@@ -11,7 +11,10 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 
 ## 2) Set up statq
 
--
+```
+$ cd statq
+$ q lib/statq.q -p 5000
+```
 
 ## 3) Examples
 
