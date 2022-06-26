@@ -24,12 +24,13 @@ $ q lib/statq.q -p 5000
 ```
 ### Linear Regression
 ```q
-q) t: ([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);
-q) .statq.linreg.insample[t;] (enlist`equation)!(enlist"y~intercept+x1")
+q) t: ([] x1: 1 5 4f; x2: 3 6 1f; y: 3 11 9f);
+q) .statq.linreg.insample[t; ] (enlist`equation)!(enlist"y~intercept+x1");
 ```
 ### Logistic Regression
 ```q
-.statq.logreg.insample[([]x1:1 5 200f;x2:6 3 40f;y:1 1 0f);] (`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1)
+q) t: ([] x1: 1 5 200f; x2: 6 3 40f; y: 1 1 0f);
+q) .statq.logreg.insample[t; ] (`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1);
 ```
 ### Validation
 ```q
