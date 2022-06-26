@@ -24,7 +24,8 @@ $ q lib/statq.q -p 5000
 ```
 ### Linear Regression
 ```q
-.statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);] (enlist`equation)!(enlist"y~intercept+x1")
+q) t: ([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);
+q) .statq.linreg.insample[t;] (enlist`equation)!(enlist"y~intercept+x1")
 ```
 ### Logistic Regression
 ```q
