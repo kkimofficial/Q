@@ -29,7 +29,7 @@ x1 x2 y
 1  3  3 
 5  6  11
 4  1  9 
-q) .statq.linreg.insample[t; ] (enlist`equation)!(enlist"y~intercept+x1");
+q) .statq.linreg.insample[t;(enlist `equation)!(enlist "y~intercept+x1")];
 ```
 ### Logistic Regression
 ```q
