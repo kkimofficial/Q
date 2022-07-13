@@ -9,7 +9,7 @@
 / * @example: .statq.timeseries.ewma[5 10 15 20 25 30f;0.1f]
 .statq.timeseries.ewma:{[x;alpha]
     {[x;y;alpha]
-        ((1 - alpha) * x) + alpha * y
+        x + alpha * y - x
     }[;;alpha]\[x]
  };
  
