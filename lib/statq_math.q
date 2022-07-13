@@ -8,7 +8,7 @@
 / * @returns {float list}: 
 / * @example: .statq.math.uniform[-1;1;100]
 .statq.math.runiform:{
-    x+(z?1f)*y-x
+    x + (z?1f) * y - x
  };
 
 / *
@@ -31,7 +31,7 @@
 / * @returns {int}: rounded value
 / * @example: .statq.math.round 0.6
 .statq.math.round:{
-    floor x+0.5
+    floor x + 0.5
  };
 
 / *
@@ -42,7 +42,7 @@
 / * @returns {int}: inverse logit value
 / * @example: .statq.math.sigmoid 0.4
 .statq.math.sigmoid:{
-    1%1+exp neg x
+    1 % 1 + exp neg x
  };
 
 / *
@@ -54,15 +54,15 @@
 / * @returns {float}: Euclidian distance between two points
 / * @example: .statq.math.distance.euclidean[1 2 3f;5 6 7f]
 .statq.math.distance.euclidean:{
-    sqrt sum xexp[y-x;2]
+    sqrt sum xexp[y - x;2]
  };
 
 .statq.math.standardize:{
-    (x-avg x)%dev x
+    (x - avg x) % dev x
  };
 
 .statq.math.normalize:{
-    (x-min x)%max[x]-min x
+    (x - min x) % max[x] - min x
  };
 
 / *
@@ -74,7 +74,9 @@
 / * @param {float} step: alpha of gradient descent
 / * @param {int} iterations: number of iterations to perform gradient descent
 / * @returns {float list}: argument at which the value of function (from which derivative is taken) is minimized
-/ * @example: .statq.math.gd[{(2*x)-4};1;0.1;100]
+/ * @example: .statq.math.gd[{(2 * x) - 4};1;0.1;100]
 .statq.math.gd:{[derivative;beta;step;iterations]
-    iterations{[beta;f;alpha]beta-alpha*f beta}[;derivative;step]/beta
+    iterations{[beta;f;alpha]
+        beta-alpha*f beta
+    }[;derivative;step]/beta
  };
