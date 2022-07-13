@@ -17,5 +17,5 @@
 / * @returns {int matrix}: diagonal matrix of order of size of x
 / * @example: .statq.matrix.diagonal 1 2 3
 .statq.matrix.diagonal:{
-    @[x*0;;:;]'[til count x;x]
+    @[x * 0;;:;]'[til count x;x]
  };
