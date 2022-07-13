@@ -77,6 +77,6 @@
 / * @example: .statq.math.gd[{(2 * x) - 4};1;0.1;100]
 .statq.math.gd:{[derivative;beta;step;iterations]
     iterations{[beta;f;alpha]
-        beta-alpha*f beta
+        beta - alpha * f beta
     }[;derivative;step]/beta
  };
