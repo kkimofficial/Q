@@ -40,3 +40,8 @@ q) .statq.logreg.insample[t; ] (`equation`iterations`step)!("y~intercept+x1+x2";
 ```q
 .statq.validation
 ```
+
+### Timeseries
+```q
+.statq.timeseries
+```
