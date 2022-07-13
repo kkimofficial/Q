@@ -76,7 +76,7 @@
 / * @returns {float list}: argument at which the value of function (from which derivative is taken) is minimized
 / * @example: .statq.math.gd[{(2 * x) - 4};1;0.1;100]
 .statq.math.gd:{[derivative;beta;step;iterations]
-    iterations{[beta;f;alpha]
+    iterations {[beta;f;alpha]
         beta - alpha * f beta
     }[;derivative;step]/beta
  };
