@@ -2,6 +2,10 @@
     $[10h = abs type x;enlist x;(),x]
  };
 
+.statq.util.dict:{[k;v]
+    .statq.util.list[k]!.statq.util.list v
+ };
+
 .statq.util.sel:{[t;columns]
     .statq.util.list[columns]#t
  };
