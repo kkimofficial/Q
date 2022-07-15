@@ -9,7 +9,9 @@
 / * @returns {dictionary list}: list of models
 / * @example: .statq.validation.kfold[update Species:?[Species=`setosa;1f;0f] from .statq.data.iris;5;.statq.logreg.insample[;(enlist`equation)!(enlist"Species~Sepal.Width+Sepal.Length")];.statq.logreg.outofsample]
 .statq.validation.kfold:{[t;k;modelinsample;modeloutofsample]
-    {last[z][x y;]first[z]x except x y}[;;modelinsample,modeloutofsample]/:[t;.statq.validation.randomsplit[til count t;k#1%k]]
+    {
+        last[z][x y;] first[z] x except x y
+    }[;;modelinsample,modeloutofsample]/:[t;.statq.validation.randomsplit[til count t;k#1 % k]]
  };
 
 .statq.validation.leaveoneout:{[t;modelinsample;modeloutofsample]
