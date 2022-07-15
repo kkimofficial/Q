@@ -3,7 +3,7 @@
  };
 
 .statq.util.dict:{[k;v]
-    .statq.util.list[k]!.statq.util.list v
+    (.statq.util.list[k]!.statq.util.list v),.statq.util.dict[`;::]
  };
 
 .statq.util.sel:{[t;columns]
