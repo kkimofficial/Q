@@ -26,7 +26,3 @@
 .statq.util.concat:{
     `$$[all 1=count each x;sv["";]string x;sv["";]each string x]
  };
-
-.statq.util.functionnamespace:{
-    get"."sv -1_"."vs first -4#get x
- };
