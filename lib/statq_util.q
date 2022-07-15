@@ -20,7 +20,7 @@
  };
 
 .statq.util.optional:{[p;arg;val]
-    (((),arg)!((),val)),p
+    .statq.util.dict[arg;val],p
  };
 
 .statq.util.concat:{
