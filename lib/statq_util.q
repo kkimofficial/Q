@@ -2,8 +2,8 @@
     $[10h = abs type x;enlist x;(),x]
  };
 
-.statq.util.sel:{
-    ((),y)#x
+.statq.util.sel:{[t;columns]
+    .statq.util.list[columns]#t
  };
 
 / .statq.util.table2matrix ([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)
