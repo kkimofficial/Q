@@ -19,11 +19,15 @@
  };
 
 .statq.validation.randomsplit:{[t;allocation]
-    t {x,enlist(z til .statq.math.round min[y,1f]*count z)except raze x}[;;neg[count t]?til count t]/[();sums allocation]
+    t {
+        x,enlist(z til .statq.math.round min[y,1f] * count z) except raze x
+    }[;;neg[count t]?til count t]/[();sums allocation]
  };
 
 .statq.validation.simplesplit:{[t;allocation]
-    t {x,enlist(z til .statq.math.round min[y,1f]*count z)except raze x}[;;til count t]/[();sums allocation]
+    t {
+        x,enlist (z til .statq.math.round min[y,1f] * count z) except raze x
+    }[;;til count t]/[();sums allocation]
  };
 
 / *
@@ -52,7 +56,7 @@
 / * @returns {float}: mean squared error
 / * @example: .statq.validation.mse[1 1 6f;1 3 4f]
 .statq.validation.mse:{[y;yhat]
-    avg xexp[y-yhat;2]
+    avg xexp[y - yhat;2]
  };
 
 / *
@@ -76,7 +80,7 @@
 / * @returns {float}: mean absolute error
 / * @example: .statq.validation.mae[1 1 6f;1 3 4f]
 .statq.validation.mae:{[y;yhat]
-    avg abs y-yhat
+    avg abs y - yhat
  };
 
 / *
@@ -88,7 +92,7 @@
 / * @returns {float}: mean absolute percentage error
 / * @example: .statq.validation.mape[1 1 6f;1 3 4f]
 .statq.validation.mape:{[y;yhat]
-    avg abs(y-yhat)%y
+    avg abs (y - yhat) % y
  };
 
 / *
@@ -108,5 +112,7 @@
  };
 
 .statq.validation.accuracy:{[y;yhat]
-    {(x[0]+x 3)%sum x}raze raze each 1_flip .statq.validation.confusionmatrix[.statq.math.round y;.statq.math.round yhat]
+    {
+        (x[0] + x 3) % sum x
+    } raze raze each 1_flip .statq.validation.confusionmatrix[.statq.math.round y;.statq.math.round yhat]
  };
