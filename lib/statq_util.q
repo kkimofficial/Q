@@ -7,14 +7,15 @@
  };
 
 .statq.util.sel:{[t;columns]
-    if[.statq.util.empty columns;
+    if[all .statq.util.empty columns;
         :();
     ];
     .statq.util.list[columns]#t
  };
 
 .statq.util.empty:{
-    $[not count x;1b;all null x;1b;0b]
+    if[not count x; :1b; ];
+    null x
  };
 
 / .statq.util.table2matrix ([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)
