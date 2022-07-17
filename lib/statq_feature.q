@@ -1,17 +1,29 @@
 .statq.feature.normalize:{[t;columns]
-    flip{x[y]:.statq.math.normalize x y;x}/[flip t;(),columns]
+    flip {
+        x[y]: .statq.math.normalize x y;
+        x
+    }/[flip t;.statq.util.list columns]
  };
 
 .statq.feature.standardize:{[t;columns]
-    flip{x[y]:.statq.math.standardize x y;x}/[flip t;(),columns]
+    flip {
+        x[y]: .statq.math.standardize x y;
+        x
+    }/[flip t;.statq.util.list columns]
  };
 
 .statq.feature.lag:{[t;columns;orders]
-    flip{x[y]:z xprev x y;x}/[flip t;(),columns;(),orders]
+    flip {
+        x[y]: z xprev x y;
+        x
+    }/[flip t;.statq.util.list columns;.statq.util.list orders]
  };
 
 .statq.feature.diff:{[t;columns]
-    flip{x[y]:0,1_deltas x y;x}/[flip t;(),columns]
+    flip {
+        x[y]: 0,1_deltas x y;
+        x
+    }/[flip t;.statq.util.list columns]
  };
 
 .statq.feature.dummyencode:{[t;columns;omitted]
