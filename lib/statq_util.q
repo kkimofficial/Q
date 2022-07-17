@@ -7,13 +7,13 @@
  };
 
 .statq.util.sel:{[t;columns]
-    if[.statq.util.none columns;
+    if[.statq.util.empty columns;
         :();
     ];
     .statq.util.list[columns]#t
  };
 
-.statq.util.none:{
+.statq.util.empty:{
     $[not count x;1b;null x;1b;0b]
  };
 
