@@ -37,9 +37,9 @@
  };
 
 / .statq.feature.construct[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f);"y~intercept+x1+x2"]
-.statq.feature.construct:{[t;e]
-    lhs: $[1 < count e: "~" vs ssr[e;" ";""];first e;()];
-    rhs: "+" vs last e;
+.statq.feature.construct:{[t;equation]
+    lhs: $[1 < count equation: "~" vs ssr[equation;" ";""];first equation;()];
+    rhs: "+" vs last equation;
     if["intercept" in rhs;
         t: update intercept: 1f from t;
     ];
