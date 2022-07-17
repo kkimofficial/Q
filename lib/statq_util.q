@@ -7,6 +7,9 @@
  };
 
 .statq.util.sel:{[t;columns]
+    if[.statq.util.none columns;
+        :();
+    ];
     .statq.util.list[columns]#t
  };
 
