@@ -24,7 +24,7 @@
  };
 
 .statq.util.required:{[p;arg]
-    $[count arg: arg where not (arg: .statq.util.list arg) in key p;'.Q.s1 arg;p]
+    $[not .statq.util.empty arg: arg where not (arg: .statq.util.list arg) in key p;'.Q.s1 arg;p]
  };
 
 .statq.util.optional:{[p;arg;val]
