@@ -59,7 +59,7 @@
 / * @returns {dictionary}: model estimates
 / * @example: .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.insample:{[t;p]
-    t:.statq.util.construct[t;].statq.util.required[p;`equation]`equation;
+    t:.statq.feature.construct[t;].statq.util.required[p;`equation]`equation;
     yhat:t[`x]mmu beta:.statq.linreg.ols[t`x;t`y];
     :(`x`y`yhat`beta`equation)!(t`x;t`y;yhat;(`coefficient`estimate)!(t`colsx;beta);p`equation);
  };
@@ -73,7 +73,7 @@
 / * @returns {dictionary}: out-of-sample model estimates
 / * @example: .statq.linreg.outofsample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);] .statq.linreg.insample[([]x1:1 5 4f;x2:3 6 1f;y:3 11 9f);(enlist `equation)!(enlist "y~intercept+x1")]
 .statq.linreg.outofsample:{[t;m]
-    t:.statq.util.construct[t;m`equation];
+    t:.statq.feature.construct[t;m`equation];
     yhat:t[`x]mmu m[`beta]`estimate;
     :m,(`x`y`yhat)!(t`x;t`y;yhat);
  };
