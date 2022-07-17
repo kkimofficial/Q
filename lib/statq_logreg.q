@@ -15,5 +15,5 @@
 .statq.logreg.outofsample:{[t;model]
     t: .statq.feature.construct[t;model`equation];
     yhat: .statq.math.sigmoid t[`x] mmu model[`beta]`estimate;
-    :m,(`x`y`yhat)!(t`x;t`y;yhat);
+    :model,(`x`y`yhat)!(t`x;t`y;yhat);
  };
