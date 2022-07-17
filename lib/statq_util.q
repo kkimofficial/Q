@@ -11,7 +11,7 @@
  };
 
 .statq.util.none:{
-    null[x] or not count x
+    $[not count x;1b;null x;1b;0b]
  };
 
 / .statq.util.table2matrix ([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)
