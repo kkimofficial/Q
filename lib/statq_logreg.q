@@ -4,13 +4,13 @@
 
 / .statq.logreg.insample [([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 1 1 0 0f);(`equation`iterations`step)!("y~intercept+x1+x2";10000;0.1)]
 .statq.logreg.insample:{[t;p]
-    t:.statq.util.prepare[t;](p:.statq.util.optional[;`iterations`step;(1000;0.1)].statq.util.required[p;`equation])`equation;
+    t:.statq.feature.construct[t;](p:.statq.util.optional[;`iterations`step;(1000;0.1)].statq.util.required[p;`equation])`equation;
     yhat:.statq.math.sigmoid t[`x]mmu beta:.statq.math.gd[;count[flip t`x]#1f;p`step;p`iterations].statq.logreg.lossderivative[t`x;t`y;];
     :(`x`y`yhat`beta`equation)!(t`x;t`y;yhat;(`coefficient`estimate)!(t`colsx;beta);p`equation);
  };
 
 .statq.logreg.outofsample:{[t;m]
-    t:.statq.util.prepare[t;m`equation];
+    t:.statq.feature.construct[t;m`equation];
     yhat:.statq.math.sigmoid t[`x]mmu m[`beta]`estimate;
     :m,(`x`y`yhat)!(t`x;t`y;yhat);
  };
