@@ -1,7 +1,20 @@
+/ *
+/ * Ensures that input argument is a list
+/ *
+/ * @param {any} x: input to be converted to list
+/ * @returns {any list}: enlisted value
+/ * @example: .statq.util.list[`a]
 .statq.util.list:{
     $[10h = abs type x;enlist x;(),x]
  };
 
+/ *
+/ * Creates a dictionary from inputs
+/ *
+/ * @param {any} k: keys
+/ * @param {any} x: values
+/ * @returns {dict}: key-value pairs
+/ * @example: .statq.util.dict[`a;1]
 .statq.util.dict:{[k;v]
     (.statq.util.list[k]!.statq.util.list v),.statq.util.list[`]!.statq.util.list (::)
  };
