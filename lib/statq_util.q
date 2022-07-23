@@ -34,7 +34,7 @@
 / *
 / * Converts table to a matrix
 / *
-/ * @param {any} t: table
+/ * @param {table} t: table
 / * @returns {any list}: matrix
 / * @example: .statq.util.table2matrix[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)]
 .statq.util.table2matrix:{[t]
