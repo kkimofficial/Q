@@ -3,7 +3,7 @@
 / * See https://en.wikipedia.org/wiki/Identity_matrix
 / *
 / * @param {int} x: order of identity matrix
-/ * @returns {int list}: identity matrix of order x
+/ * @returns {float list}: identity matrix of order x
 / * @example: .statq.matrix.identity 3
 .statq.matrix.identity:{
     .statq.matrix.diagonal x#1f
