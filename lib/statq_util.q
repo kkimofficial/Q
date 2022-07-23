@@ -12,7 +12,7 @@
 / * Creates a dictionary from inputs
 / *
 / * @param {any} k: keys
-/ * @param {any} x: values
+/ * @param {any} v: values
 / * @returns {dict}: key-value pairs
 / * @example: .statq.util.dict[`a;1]
 .statq.util.dict:{[k;v]
@@ -31,9 +31,14 @@
     all null x
  };
 
-/ .statq.util.table2matrix ([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)
-.statq.util.table2matrix:{
-    flip value flip x
+/ *
+/ * Converts table to a matrix
+/ *
+/ * @param {any} t: table
+/ * @returns {any list}: matrix
+/ * @example: .statq.util.table2matrix[([] x1: 1 5 200 0.5f; x2: 6 3 40 1f; y: 3 11 100 2f)]
+.statq.util.table2matrix:{[t]
+    flip value flip t
  };
 
 .statq.util.required:{[p;arg]
