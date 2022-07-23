@@ -1,5 +1,5 @@
 / *
-/ * Performs simple exponential smoothing for given timeseries
+/ * Performs simple exponential smoothing for a given timeseries
 / * See https://en.wikipedia.org/wiki/Exponential_smoothing
 / *
 / * @param {float} x: left bound
