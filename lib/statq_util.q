@@ -8,6 +8,10 @@
     $[10h = abs type x;enlist x;(),x]
  };
 
+.statq.util.float:{
+    `float$x
+ };
+
 / *
 / * Creates a dictionary from inputs
 / *
