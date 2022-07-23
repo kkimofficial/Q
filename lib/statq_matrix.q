@@ -13,8 +13,8 @@
 / * Constructs diagonal matrix with x as diagonal entries
 / * See https://en.wikipedia.org/wiki/Diagonal_matrix
 / *
-/ * @param {int} x: diagonal elements
-/ * @returns {int matrix}: diagonal matrix of order of size of x
+/ * @param {int|float} x: diagonal elements
+/ * @returns {int|float list}: diagonal matrix of order of size of x
 / * @example: .statq.matrix.diagonal 1 2 3
 .statq.matrix.diagonal:{
     @[x * 0;;:;]'[til count x;x]
