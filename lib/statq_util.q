@@ -34,7 +34,7 @@
 / * Checks if input is null or zero length
 / *
 / * @param {any} x: input to be checked
-/ * @returns {boolean}: true if input argument null or empty, false otherwise
+/ * @returns {boolean}: true if input argument null or has length of zero, false otherwise
 / * @example: .statq.util.empty[`]
 .statq.util.empty:{
     if[not count x; :1b; ];
