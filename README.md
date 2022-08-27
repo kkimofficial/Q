@@ -5,8 +5,8 @@ DISCLAIMER: THIS WORK IS NOT NECESSARILY A REPRESENTATION OF ANY PAST OR CURRENT
 ## 1) Set up kdb+
 
 - [What is kdb+](https://en.wikipedia.org/wiki/Kdb+)
-- [How to set up kdb+](https://code.kx.com/q/)
 - [What makes kdb+ so fast](https://kx.com/blog/what-makes-time-series-database-kdb-so-fast/)
+- [How to set up kdb+](https://code.kx.com/q/)
 - [Introduction to kdb+ and q language](https://code.kx.com/q4m3/)
 
 ## 2) Set up statq
