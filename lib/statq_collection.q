@@ -17,5 +17,5 @@
 / * @returns {dict}: key-value pairs
 / * @example: .statq.collection.dict[`a;1]
 .statq.collection.dict:{[k;v]
-    (.statq.collection.list[k]!.statq.collection.list v),.statq.collection.list[`]!.statq.collection.list (::)
+    (.statq.collection.list[k]!.statq.collection.list v), .statq.collection.list[`]!.statq.collection.list (::)
  };
